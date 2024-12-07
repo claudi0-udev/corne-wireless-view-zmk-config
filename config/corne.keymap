@@ -16,12 +16,13 @@
 };
 
 / {
-    zmk,display {
-        compatible = "zmk,oled-display";
-        label = "OLED Display";
+    zephyr,display {
+        compatible = "ssd1306";
+        i2c = <&i2c1>;
+        label = "SSD1306";
         width = <128>;
         height = <32>;
-        i2c = <&i2c1>;
+        pixel_format = "mono10";
     };
 };
 
